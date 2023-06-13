@@ -10,12 +10,16 @@
 public class CreateAccount {
     public static void main(String[] args) {
         Account firstAccount = new Account();
-        firstAccount.balance = 1000;
+        firstAccount.balance = 200;
         System.out.println(firstAccount.balance);
-        
-        Account seconAccount = new Account();
-        seconAccount.balance = 500;
-        System.out.println(seconAccount.balance);
+
+        firstAccount.balance += 100;
+        System.out.println(firstAccount.balance);
+
+        Account secondAccount = firstAccount;
+        secondAccount.balance = 50;
+
+        System.out.println("The first account has " + firstAccount.balance);
+        System.out.println("The second account has " + secondAccount.balance);
     }
-    
 }
