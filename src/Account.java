@@ -8,29 +8,62 @@
  * @author Robin
  */
 public class Account {
-    double balance;
-    int agency;
-    int number;
-    String owner;
+    private double getBalance;
+    private int agency;
+    private int number;
+    private Client owner = new Client();
+    public int setBalance;
 
     public void deposit(double value) {
-        this.balance += value;
+        this.getBalance += value;
     }
 
     public boolean withdraw(double value) {
-        if (this.balance >= value) {
-            this.balance -= value;
+        if (this.getBalance >= value) {
+            this.getBalance -= value;
             return true;
         }
         return false;
     }
 
     public boolean transfer(double value, Account account) {
-        if (this.balance >= value) {
-            this.balance -= value;
+        if (this.getBalance >= value) {
+            this.getBalance -= value;
             account.deposit(value);
             return true;
         }
         return false;
+    }
+
+    public double getBalance() {
+        return this.getBalance;
+    }
+
+    public void setAgency(int agency) {
+        if (agency > 0) {
+            this.agency = agency;
+        } else {
+            System.out.println("It is not allowed negative values!");
+        }
+    }
+
+    public int getAgency() {
+        return agency;
+    }
+
+    public void setOwner(Client owner) {
+        this.owner = owner;
+    }
+
+    public Client getOwner() {
+        return owner;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }
