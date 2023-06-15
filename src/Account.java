@@ -11,8 +11,7 @@ public class Account {
     private double getBalance;
     private int agency;
     private int number;
-    private Client owner = new Client();
-    public int setBalance;
+    private Client owner;
 
     public void deposit(double value) {
         this.getBalance += value;
