@@ -8,26 +8,37 @@
  * @author Robin
  */
 public class Account {
-    private double getBalance;
+    private double balance;
     private int agency;
     private int number;
     private Client owner;
+    private static int total = 0;
+
+    public Account(int agency, int number) {
+        Account.total++;
+        System.out.println("The total in your account is " + Account.total);
+        this.agency = agency;
+        this.number = number;
+        this.balance = 100;
+        System.out.println("I am creating a new account.");
+        total++;
+    }
 
     public void deposit(double value) {
-        this.getBalance += value;
+        this.balance += value;
     }
 
     public boolean withdraw(double value) {
-        if (this.getBalance >= value) {
-            this.getBalance -= value;
+        if (this.balance >= value) {
+            this.balance -= value;
             return true;
         }
         return false;
     }
 
     public boolean transfer(double value, Account account) {
-        if (this.getBalance >= value) {
-            this.getBalance -= value;
+        if (this.balance >= value) {
+            this.balance -= value;
             account.deposit(value);
             return true;
         }
@@ -35,19 +46,19 @@ public class Account {
     }
 
     public double getBalance() {
-        return this.getBalance;
+        return this.balance;
     }
 
     public void setAgency(int agency) {
-        if (agency > 0) {
-            this.agency = agency;
-        } else {
+        if (agency <= 0) {
             System.out.println("It is not allowed negative values!");
+            return;
         }
+        this.agency = agency;
     }
 
     public int getAgency() {
-        return agency;
+        return this.agency;
     }
 
     public void setOwner(Client owner) {
@@ -55,14 +66,22 @@ public class Account {
     }
 
     public Client getOwner() {
-        return owner;
+        return this.owner;
     }
 
     public int getNumber() {
-        return number;
+        return this.number;
     }
 
     public void setNumber(int number) {
+        if (number <= 0) {
+            System.out.println("The number cannot be negative!");
+            return;
+        }
         this.number = number;
+    }
+
+    public static int getTotal() {
+        return Account.total;
     }
 }
