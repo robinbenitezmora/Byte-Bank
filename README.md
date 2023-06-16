@@ -2,15 +2,14 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Beers Collection <a name="about-project"></a>
+# 📖 Byte Bank Project <a name="about-project"></a>
 
 
-Beer Collection is a fascinating app on GitHub dedicated to the world of beer enthusiasts. This repository serves as a comprehensive catalog and management system for beer lovers to keep track of their personal beer collections. Users can create and manage virtual collections, adding details such as brand, style, country of origin, and quantity.
-
+This is an application whose purpose is to run a basic CRUD in a financial institution, but this time in Java. The application is able to create, read, update and delete accounts, as well as make transfers between accounts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+### Java <a name="tech-stack"></a>
 
 > Ruby on Rails / Postresql
 
@@ -39,18 +38,11 @@ Beer Collection is a fascinating app on GitHub dedicated to the world of beer en
 
 ### Key Features <a name="key-features"></a>
 
-- **App is able to display custom categories for each user**
-- **App is able to generate categories and transactions for each category**
+- **App is able to create, read, update and delete accounts**
+- **App is able to make transfers between accounts**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Media and Live Demo <a name="presentation"></a>
-
-<!-- [Video presentation](https://drive.google.com/file/d/1tw8ZqRIq7FthPAdj8zmVRgNb78NUUFXj/view?usp=share_link)  <br/>
-[Deploy](https://my-budget-manager-c423.onrender.com) -->
-
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -58,7 +50,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-have installed Ruby on your system check with Ruby -v
+Have installed Java on your system check with Java -v
 
 In order to run this project you need:
 
@@ -66,21 +58,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-> git clone git@github.com:robinbenitezmora/Beers-Collection.git
-
-### Install
-
-type : cd Beers-Collection
-
-
-Type : bundle install
-
-### Usage
-
-To run the project, execute the following command:
-
-  rails server
-
+> git clone git@github.com:robinbenitezmora/Byte-Bank.git
 
 <!-- AUTHORS -->
 
